@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "main": "webpack.config.js",
+  "type": "module",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --open --mode development"

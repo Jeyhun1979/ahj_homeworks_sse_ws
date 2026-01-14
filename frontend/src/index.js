@@ -7,7 +7,7 @@ import './css/style.css';
 const root = document.getElementById('app');
 
 const protocol = location.hostname === 'localhost' ? 'ws' : 'wss';
-const host = location.hostname === 'localhost' ? 'localhost:3000' : 'YOUR_RENDER_BACKEND_URL';
+const host = location.hostname === 'localhost' ? 'localhost:3000' : 'ahj-homeworks-sse-ws-ocbp.onrender.com';
 const ws = new WSClient(`${protocol}://${host}`);
 ws.connect();
 

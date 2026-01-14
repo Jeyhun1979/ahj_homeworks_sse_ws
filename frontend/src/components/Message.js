@@ -1,15 +1,3 @@
-// export default function Message(from, text, isOwn) {
-//   const container = document.createElement('div');
-//   container.className = `chat__message${isOwn ? ' chat__message--own' : ''}`;
-
-//   container.innerHTML = `
-//     <span class="chat__message-from">${from}</span>
-//     <span class="chat__message-text">${text}</span>
-//   `;
-
-//   return container;
-// }
-
 export default function Message(from, text, isOwn) {
   const container = document.createElement('div');
   container.className = `chat__message${isOwn ? ' chat__message--own' : ''}`;

@@ -1,9 +1,3 @@
-// export default function UsersList() {
-//   const container = document.createElement('div');
-//   container.className = 'chat__users';
-//   return container;
-// }
-
 export default function UsersList(currentUser, users = []) {
   const container = document.createElement('div');
   container.className = 'chat__users';

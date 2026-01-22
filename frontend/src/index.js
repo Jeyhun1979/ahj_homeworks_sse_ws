@@ -17,6 +17,7 @@ const renderModal = (error = '') => {
   root.replaceChildren();
   const modal = Modal({
     onSubmit: (nick) => {
+      nickname = nick;
       ws.send({ type: 'join', nickname: nick });
     },
     error,
@@ -33,7 +34,6 @@ const renderChat = () => {
 renderModal();
 
 ws.on('init', (data) => {
-  nickname = nickname || data.users.find(u => !u.includes('You')) || nickname;
   renderChat();
 });
 

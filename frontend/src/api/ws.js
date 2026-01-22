@@ -2,6 +2,10 @@ export default class WSClient {
   constructor(url) {
     this.ws = new WebSocket(url);
     this.listeners = {};
+    this.ws.addEventListener('message', (event) => {
+      const data = JSON.parse(event.data);
+      this.listeners[data.type]?.(data);
+    });
   }
 
   on(type, callback) {
@@ -13,9 +17,6 @@ export default class WSClient {
   }
 
   connect() {
-    this.ws.addEventListener('message', (event) => {
-      const data = JSON.parse(event.data);
-      this.listeners[data.type]?.(data);
-    });
+    // Connection is already established in constructor
   }
 }
